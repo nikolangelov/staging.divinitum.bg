@@ -236,11 +236,11 @@ export default function Page() {
 								</div>
 							</AnimatedComponent>
 						</div>
-						{/* <AnimatedComponent>
+						<AnimatedComponent>
 							<div class="flex flex-col flex-items-center">
-								<a href="/" class="bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
+								<a href="/karieri" class="bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Кандидатствай</a>
 							</div>
-						</AnimatedComponent> */}
+						</AnimatedComponent>
 					</AnimatedComponentSlide>
 				</div>
 			</section>
