@@ -59,6 +59,12 @@ function BarberContainer(props: { title: string; href: string; img: string; alt:
 export default function Page() {
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWKWKC4Z"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;">
 				<div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-100vh za-nas-img" role="img" aria-label="the barber shop Sofia">
 					<div class="w-full bg-#212528">

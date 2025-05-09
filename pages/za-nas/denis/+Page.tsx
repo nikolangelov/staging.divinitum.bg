@@ -9,6 +9,12 @@ import { H2WithImage } from "../../../components/H2WithImage";
 export default function Page() {
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWKWKC4Z"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) ), url(/assets/denis/барбър-денис-индивидуална-мобилно.webp); background-position: center; background-repeat: no-repeat; background-size: cover;" class="h-100vh denis-img" role="img" aria-label="Барбър Денис - Индивидуална"></div></div>
 
 			<div class="w-full bg-#212528">

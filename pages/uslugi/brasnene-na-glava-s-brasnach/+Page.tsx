@@ -114,6 +114,12 @@ function SingleCollapse() {
 export default function Page() {
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWKWKC4Z"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-в-бръснарница.webp); background-position: left 100% top 100%; background-repeat: no-repeat; background-size: cover;" class="h-97vh md:h-100vh brasnene-na-glava-img" role="img" aria-label="бръснене на глава с бръснач в barber shop sofia"></div></div>
 
 			<div class="w-full bg-#212528">

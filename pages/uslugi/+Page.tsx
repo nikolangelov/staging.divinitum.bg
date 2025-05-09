@@ -54,6 +54,12 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWKWKC4Z"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<AnimatedComponent class="max-w-400px w-full h-500px md-w-400px md-h-550px">
 				{isDesktop() ? (
 					<a href={props.href}>

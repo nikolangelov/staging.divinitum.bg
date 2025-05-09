@@ -132,6 +132,12 @@ function SingleCollapse() {
 export default function Page() {
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWKWKC4Z"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="filter: saturate(1.1); background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/podstrigvane-i-oformiane-na-brada/мъжко-подстригване-и-оформяне-на-брада-1.webp); background-position: left 80% top 100%; background-repeat: no-repeat; background-size: cover;" class="h-100vh kombo-img" role="img" aria-label="подстригване и оформяне на мъжка брада"></div></div>
 
 			<div class="w-full bg-#212528">

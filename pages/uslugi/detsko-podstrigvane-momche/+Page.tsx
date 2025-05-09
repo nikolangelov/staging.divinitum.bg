@@ -124,6 +124,12 @@ function SingleCollapse() {
 export default function Page() {
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWKWKC4Z"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="filter: saturate(1.1); background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/detsko-podstrigvane-momche/детско-подстригване-с-машинка-1.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-100vh detsko-pod-img" role="img" aria-label="детско подстригване с машинка"></div></div>
 
 			<div class="w-full bg-#212528">

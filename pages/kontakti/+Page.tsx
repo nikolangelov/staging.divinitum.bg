@@ -180,6 +180,12 @@ export default function Page() {
 
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWKWKC4Z"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<section class="lg-pt-55 pb-20 pt-30 px-2 md:px-4 w-full">
 
 				<AnimatedComponent class="w-full mb-30">

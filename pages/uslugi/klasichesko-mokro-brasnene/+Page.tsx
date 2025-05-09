@@ -143,6 +143,12 @@ function SingleCollapse() {
 export default function Page() {
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWKWKC4Z"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/klasichesko-mokro-brasnene/мокро-бръснене-софия-1.webp); background-position: right top; background-repeat: no-repeat; background-size: cover;" class="h-100vh brasnene-img" role="img" aria-label="мокро бръснене в София"></div></div>
 
 			<div class="w-full bg-#212528">
