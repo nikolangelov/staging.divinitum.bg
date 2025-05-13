@@ -19,7 +19,6 @@ import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import { H2WithImage } from '../components/H2WithImage';
 import Cookies from 'js-cookie';
 import MdiCookie from '~icons/mdi/cookie';
-import RiShining2Line from '~icons/ri/shining-2-line';
 import MdiPlus from '~icons/mdi/plus';
 
 declare global {
@@ -29,7 +28,7 @@ declare global {
   }
 }
 
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with your actual GA measurement ID
+const GA_MEASUREMENT_ID = 'G-59DVW1V3J4';
 
 const cookies = [
   {

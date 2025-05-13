@@ -10,10 +10,13 @@ import MdiBank from '~icons/mdi/bank';
 import MdiPhoneClassic from '~icons/mdi/phone-classic';
 import RiTimerFill from '~icons/ri/timer-fill';
 import { ServiceContaner } from '../../components/ServiceContainer';
+import { Head } from 'vike-solid/Head';
 
 export default function Page() {
 	return (
 		<>
+			<Head><meta name="google-site-verification" content="hYXSLNVoAgD8gglbKZvTZycfmFhcTTRZ8CKPADFbRP0" /></Head>
+
 			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-105vh home-img" role="img" aria-label="бръснарски салон софия център"></div></div>
 
 			<div class="w-full bg-#212528">
@@ -416,7 +419,7 @@ export default function Page() {
 									<h3 class="text-left mt-0 c-paper-inv op-70%">Опитни и квалифицирани барбъри</h3>
 									<div class="pb-10">Зад всяка перфектна прическа в The Barber Shop Sofia стои екип от изключителни професионалисти. Нашият барбър шоп е събрал част от най-добрите бръснари в София. Всеки от тях преминава през интензивно обучение, което обхваща както класическите бръснарски техники, така и най-новите тенденции в подстригването. Благодарение на това можем да Ви предложим премиум обслужване на високо ниво и страхотни резултати.</div>
 								</AnimatedComponent>
-							</div> 
+							</div>
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="text-left mt-6 lg-mt-0 c-paper-inv op-70%">Професионални инструменти</h3>
