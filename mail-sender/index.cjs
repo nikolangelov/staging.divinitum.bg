@@ -29,7 +29,7 @@ const transporter = nodemailer.createTransport({
     debug: true,
 });
 
-app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
+app.post('/api/send-email', (req, res) => {
     const { senderEmail, text, phone, name, surname } = req.body;
 
     const emailContent = `

@@ -132,17 +132,29 @@ export default function Page() {
 		setIsUploading(true);
 		setProgress(0);
 
-		const formData = new FormData();
-		formData.append('senderEmail', email());
-		formData.append('name', name());
-		formData.append('surname', surname());
-		formData.append('phone', phone());
-		formData.append('text', text());
+		// const formData = new FormData();
+		// formData.append('senderEmail', email());
+		// formData.append('name', name());
+		// formData.append('surname', surname());
+		// formData.append('phone', phone());
+		// formData.append('text', text());
+
+		const payload = {
+			senderEmail: email(),
+			name: name(),
+			surname: surname(),
+			phone: phone(),
+			text: text(),
+		};
 
 		try {
 			const response = await fetch('/api/send-email', {
 				method: 'POST',
-				body: formData,
+				// body: formData,
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(payload),
 			});
 
 			if (response.ok) {
