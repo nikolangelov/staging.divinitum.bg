@@ -59,9 +59,6 @@ export default defineConfig({
 		},
 	},
 	build: {
-		rollupOptions: {
-			external: ['@emailjs/browser'],
-		},
 		// target is es2022 to support top level await
 		// https://caniuse.com/?search=top%20level%20await
 		target: "es6",
