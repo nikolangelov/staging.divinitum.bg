@@ -4,31 +4,25 @@ export const VideoPlayer = (props: { src: string }) => {
   let videoRef: HTMLVideoElement | undefined;
 
   onMount(() => {
-    const checkAndObserve = () => {
-      if (!videoRef) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && videoRef && !videoRef.src) {
+            videoRef.src = props.src;
+            videoRef.play().catch(() => {}); // avoid autoplay error if disallowed
+          } else if (!entry.isIntersecting && videoRef) {
+            videoRef.pause();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              videoRef?.play();
-            } else {
-              videoRef?.pause();
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
+    if (videoRef) observer.observe(videoRef);
 
-      observer.observe(videoRef);
-
-      onCleanup(() => {
-        observer.disconnect();
-      });
-    };
-
-    // Slight delay to ensure videoRef is ready
-    requestAnimationFrame(checkAndObserve);
+    onCleanup(() => {
+      observer.disconnect();
+    });
   });
 
   return (
@@ -36,12 +30,11 @@ export const VideoPlayer = (props: { src: string }) => {
       <video
         ref={(el) => (videoRef = el)}
         class="w-full h-[250px] sm:h-[400px] md:h-[600px] lg:h-[700px] xl:h-[750px] bg-transparent"
-        src={props.src}
         controls
         muted
         autoplay
         playsinline
-        preload="auto"
+        preload="none" // critical for page speed
       />
     </div>
   );
