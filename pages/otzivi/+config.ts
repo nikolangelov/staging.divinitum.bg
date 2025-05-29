@@ -6,8 +6,8 @@ import { createEffect } from "solid-js";
 // Default config (can be overridden by pages)
 export default {
   // <title>
-  title: "Мъжко подстригване в София – The Barber Shop Sofia",
-  description: "Професионално мъжко подстригване в центъра на София. Доверете се на The Barber Shop Sofia за своя свеж и безупречен външен вид.",
+  title: "Какво казват клиентите за The BarberShop Sofia",
+  description: "Готина атмосфера, точни бръснари и доволни клиенти – виж какво казват хората за нас. Оценяваме всяко мнение и винаги се стремим към още по-добро обслужване.",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;
