@@ -1,29 +1,33 @@
 import { onCleanup, onMount } from "solid-js";
 
 export const VideoPlayer = (props: { src: string }) => {
-  let videoRef: HTMLVideoElement | undefined;
+	let videoRef: HTMLVideoElement | undefined;
 
-  onMount(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && videoRef && !videoRef.src) {
-            videoRef.src = props.src;
-            videoRef.play().catch(() => {}); // avoid autoplay error if disallowed
-          } else if (!entry.isIntersecting && videoRef) {
-            videoRef.pause();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (videoRef) {
+						if (entry.isIntersecting) {
+							if (!videoRef.src) {
+								videoRef.src = props.src;
+							}
+							videoRef.play().catch(() => {});
+						} else {
+							videoRef.pause();
+						}
+					}
+				});
+			},
+			{ threshold: 0.4 }
+		);
 
-    if (videoRef) observer.observe(videoRef);
+		if (videoRef) observer.observe(videoRef);
 
-    onCleanup(() => {
-      observer.disconnect();
-    });
-  });
+		onCleanup(() => {
+			observer.disconnect();
+		});
+	});
 
   return (
     <div class="flex justify-center items-center mt-0 lg:mt-20 max-w-[1400px] mx-auto">

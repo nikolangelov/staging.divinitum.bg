@@ -12,6 +12,7 @@ import MdiPhoneClassic from '~icons/mdi/phone-classic';
 import RiTimerFill from '~icons/ri/timer-fill';
 import MdiCommentCheckOutline from '~icons/mdi/comment-check-outline';
 import MdiEmailMultipleOutline from '~icons/mdi/email-multiple-outline';
+import MdiFileCertificateOutline from '~icons/mdi/file-certificate-outline';
 import MdiBankOutline from '~icons/mdi/bank-outline';
 import MdiAccountFileTextOutline from '~icons/mdi/account-file-text-outline';
 import MdiAccountGroupOutline from '~icons/mdi/account-group-outline';
@@ -297,7 +298,7 @@ export const CookieConsent = () => {
     <>
       <Show when={showCookieIcon()}>
         <div
-          class="fixed bottom-0 left-4 z-100 cursor-pointer c-brand-dark"
+          class="fixed bottom-0 left-4 z-3 cursor-pointer c-brand-dark"
           onClick={() => setShowSettings(true)}
         >
           <MdiCookie class="font-size-8" />
@@ -306,7 +307,7 @@ export const CookieConsent = () => {
 
       <Show when={showSettings()}>
         <div class="fixed inset-0 bg-gray-800 bg-opacity-50 z-9">
-          <div class="fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-center items-center p-4">
+          <div class="fixed inset-0 bg-gray-800 bg-opacity-50 z-10 flex justify-center items-center p-4">
             <div class="relative bg-paper shadow-lg max-h-[90vh] overflow-auto w-11/12 md:w-3/4 lg:w-2/3 pt-8 p-5 md:p-10">
               <h2 class="important-mb-0 important-md-mb-12 md-mt-10 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">
                 Настройки на бисквитки
@@ -402,6 +403,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <MenuItem href="/otzivi">Отзиви</MenuItem>
           <MenuItem href="/za-nas">За нас</MenuItem>
           <MenuItem href="/karieri">Кариери</MenuItem>
+          <MenuItem href="/kurs-za-brasnar">Академия</MenuItem>
           <MenuItem href="/kontakti">Контакти</MenuItem>
         </div>
 
@@ -414,7 +416,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         </a>
         <HamburgerMenu />
       </Topbar>
-        <Content>{childrenMemo()}</Content>
+      <Content>{childrenMemo()}</Content>
       <CookieConsent />
       <BackToTopArrow></BackToTopArrow>
       <TopFooter />
@@ -449,11 +451,9 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
 
             <div class="hidden md-flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1" style="border-right-color: rgba(255, 255, 255, 0.12); border-left-color: rgba(255, 255, 255, 0.2);">
               <h3 class="c-brand font-600 mt-0 uppercase">Полезни връзки</h3>
-              <div class="hidden">
-                <MainFooterMenuItem href="/">Магазин</MainFooterMenuItem>
-                <div>
-                  <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
-                </div>
+              <MainFooterMenuItem href="/kurs-za-brasnar">Академия</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
               <MainFooterMenuItem href="/kontakti">Контакти</MainFooterMenuItem>
               <div>
@@ -472,7 +472,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             </div>
           </div>
 
-          <div class="flex flex-justify-center pt-11 pb-2 gap-3 b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30" style="border-top-color: rgba(255, 255, 255, 0.12);">
+          <div class="flex flex-justify-center pt-11 pb-2 md:pb-6 gap-3 b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30" style="border-top-color: rgba(255, 255, 255, 0.12);">
             <a href="https://www.facebook.com/TheBarberShopSofia/?locale=en_GB" target="_blank" rel="noopener">
               <RiFacebookFill class="w-10 h-10 bg-brand-compliment hover-c-paper-inv transition-colors p-1.5 c-paper" />
             </a>
@@ -700,7 +700,7 @@ function HamburgerMenu() {
   };
 
   return (
-    <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
+    <div class="z-99 lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
       <div class="flex flex-items-center flex-justify-center lg-pl-4 pl-0">
         <a href="/" onClick={closeMenu}>
           <img width="52" height="52" loading="lazy" src="/assets/logo-mobile.png" class="w-13 mr--3 mt-4" alt="thebarbershop-logo" />
@@ -715,7 +715,7 @@ function HamburgerMenu() {
           Запазете час
         </button>
       </a>
-      <div class="ml-6 md-mr-10 z-99">
+      <div class="ml-6 md-mr-10 z-93">
         <input type="checkbox" id="menu-checkbox" class="hidden" />
         <label
           id="burger-menu"
@@ -730,14 +730,13 @@ function HamburgerMenu() {
       </div>
       <Show when={open()}>
         <div
-          class="fixed w-full h-full left-0 top-0 px-10 pt-10 transition-all transition-duration-400 bg-#15151599 backdrop-blur-[10px] border border-[rgba(235,166,91,0.3)]"
+          class="z-92 fixed w-full h-full left-0 top-0 px-10 pt-10 transition-all transition-duration-400 bg-#15151599 backdrop-blur-[10px] border border-[rgba(235,166,91,0.3)]"
           style={`
             height: 100vh;
             opacity: ${opacity()};
             transform: translateY(${translateY()});
             overflow-y: auto;
             transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
-            
           `}
         >
           <div class="py-10 text-left">
@@ -829,14 +828,8 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
           <MobileDropdownMenuItem
             closeMenu={props.closeMenu}
             text="За нас"
-            href="/za-nas"
             icon={<MdiAccountGroupOutline />}
-            subMenu={[
-              { href: "/za-nas/kris", text: "Кристиан" },
-              { href: "/za-nas/mario", text: "МАРИО" },
-              { href: "/za-nas/blago", text: "Благовест" },
-              { href: "/za-nas/denis", text: "ДЕНИС" },
-            ]}
+            href="/za-nas"
           />
           <MobileDropdownMenuItem
             closeMenu={props.closeMenu}
@@ -852,6 +845,12 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
               href="/"
             />
           </div>
+          <MobileDropdownMenuItem
+            closeMenu={props.closeMenu}
+            text="Академия"
+            icon={<MdiFileCertificateOutline />}
+            href="/kurs-za-brasnar"
+          />
           <MobileDropdownMenuItem
             closeMenu={props.closeMenu}
             text="Контакти"

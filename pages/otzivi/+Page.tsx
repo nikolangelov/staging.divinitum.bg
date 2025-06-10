@@ -64,7 +64,7 @@ function useMediaQuery(query: string) {
 	return matches;
 }
 
-function ImageWithFrameReview(props: { text: string | JSX.Element; src: string; date: string; service: string; style?: string; hrefGoogleReview: string; }) {
+export function ImageWithFrameReview(props: { text: string | JSX.Element; src: string; date: string; service: string; style?: string; hrefGoogleReview: string; }) {
 	return (
 		<a target="_blank" rel="noopener" href={props.hrefGoogleReview}>
 			<div class="max-w-600px sm:max-w-900px mx-auto flex flex-col lg:flex-row justify-center items-center relative gap-2 sm:gap-6 md:gap-10 overflow-hidden">
@@ -135,7 +135,7 @@ export const QuotationReviewsSlider = ({ children, buttonClass, ...props }: { ch
 	);
 };
 
-function QuotationReview(props: { text: string | JSX.Element; name: string; profile: string; hrefGoogleReview: string; }) {
+export function QuotationReview(props: { text: string | JSX.Element; name: string; profile: string; hrefGoogleReview: string; }) {
 	return (
 		<a class="max-w-900px flex relative bg-paper p-7 md:p-8 lg:p-10" target="_blank" rel="noopener" href={props.hrefGoogleReview}>
 			<div>
@@ -554,12 +554,7 @@ export default function Page() {
 								src: "/assets/otzivi/barber-shop-otzivi-usluga-podstrigvane.jpg",
 								alt: "barber-shop-otzivi-usluga-podstrigvane",
 								name: "Craig & Jenny Wilson",
-								reviewtext: (
-									<>
-										Put the “bar” in barber. 🥃<br />
-										Cool place and great work.
-									</>
-								),
+								reviewtext: "Put the “bar” in barber. 🥃 Cool place and great work."
 							},
 						]} />
 					</div>
