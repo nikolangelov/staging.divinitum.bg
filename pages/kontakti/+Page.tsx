@@ -143,13 +143,13 @@ const ContactUs = ({ onSuccess, onError, setUploading }: ContactUsProps) => {
 
 	return (
 		<form class="space-y-6" ref={(el) => (form = el)} onSubmit={sendEmail}>
-			<div class="space-y-4">
+			<div class="sm:space-y-4 space-y-1">
 				<div class="input-highlight relative overflow-hidden">
 					<input
 						name="name"
 						type="text"
-						placeholder="Име"
-						class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper"
+						placeholder="Име (Name)"
+						class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper md:font-size-13px font-size-12px"
 						required
 					/>
 				</div>
@@ -157,8 +157,8 @@ const ContactUs = ({ onSuccess, onError, setUploading }: ContactUsProps) => {
 					<input
 						name="surname"
 						type="text"
-						placeholder="Фамилия"
-						class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper"
+						placeholder="Фамилия (Last Name)"
+						class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper md:font-size-13px font-size-12px"
 						required
 					/>
 				</div>
@@ -166,9 +166,9 @@ const ContactUs = ({ onSuccess, onError, setUploading }: ContactUsProps) => {
 					<input
 						name="phone"
 						type="tel"
-						pattern="^\+?[0-9\s\-]{7,15}$"
-						placeholder="Phone"
-						class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper"
+						pattern="^/+?[0-9/s/-]{7,15}$"
+						placeholder="Телефон (Phone)"
+						class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper md:font-size-13px font-size-12px"
 						required
 					/>
 				</div>
@@ -176,15 +176,15 @@ const ContactUs = ({ onSuccess, onError, setUploading }: ContactUsProps) => {
 					<input
 						name="email_id"
 						type="email"
-						placeholder="Email"
-						class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper"
+						placeholder="Имейл (Email)"
+						class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper md:font-size-13px font-size-12px"
 						required
 					/>
 				</div>
 				<div class="pt-2">
 					<textarea
 						name="message"
-						placeholder="Разкажи повече за себе си и бръснарството..."
+						placeholder="Напишете Вашето съобщение…"
 						class="rounded-0 w-full px-4 py-3 bg-white border-paper focus:border-brand focus:ring-2 focus:ring-brand focus:ring-opacity-50 outline-none transition-all duration-200 h-32 resize-none"
 					></textarea>
 				</div>
@@ -193,10 +193,10 @@ const ContactUs = ({ onSuccess, onError, setUploading }: ContactUsProps) => {
 				type="submit"
 				value="Send"
 				class="cursor-pointer font-700 border-none hover:shadow-xl hover:translate-y-[-2px] translate-y-[0px] bg-gradient-to-br from-[#c29059] to-[#c27832] duration-200 ease-in-out shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),_0_4px_6px_-2px_rgba(252,252,252,0.05)] w-full text-white py-4 font-medium transition-all uppercase tracking-1.5px text-sm focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-50 rounded-0">
-				Кандидатствай
+				Изпратете
 			</button>
 			<div class="text-center text-xs text-paper mt-4">
-				Ще обработим вашето запитване с внимание. Очаквайте нашия отговор скоро!
+				Ще се свържем с Вас по телефон възможно най-скоро, за да обсъдим всичките Ви въпроси.
 			</div>
 		</form>
 	);
@@ -265,7 +265,7 @@ export default function Page() {
 						<div class="px-20px py-25px md:px-30px md:py-40px rounded-0 w-full max-w-150 overflow-hidden relative bg-#14100c" style="background-image: url(/assets/wood-bg-2.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 
 							<div class="md:px-12 md:pt-10 py-5 px-3">
-								<h2 class="important-mt-0 md:mt-5 mb-10 c-paper">Изпрати запитване</h2>
+								<h2 class="important-mt-0 md:mt-5 mb-10 c-paper">Свържете се с нас</h2>
 								{!isModalOpen() && !errorMessage() && (
 									<ContactUs
 										onSuccess={handleSuccess}

@@ -45,10 +45,10 @@ function BarberContainer(props: { title: string; href: string; img: string; alt:
 				<div class="relative pl-8 py-6.5 md:py-7 bg-#14100c">
 					<div class="transition-all duration-500 flex justify-center items-center gap-3">
 						<div class="c-paper font-size-8 font-500 flex justify-center items-center" style="font-family:'Oswald', sans-serif !important;">
-							<MdiScissors class="c-paper w-6 pt-1 mr-2" />
+							<MdiScissors class="c-brand w-6 pt-1 mr-2" />
 							{props.title}
 						</div>
-						<MdiArrowRight class="c-brand-compliment font-size-9.5 pt-1 group-hover:ml-2 transition-all" />
+						<MdiArrowRight class="c-paper font-size-9.5 pt-1 group-hover:ml-2 transition-all" />
 					</div>
 				</div>
 			</div>
