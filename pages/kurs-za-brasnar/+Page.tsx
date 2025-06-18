@@ -403,7 +403,7 @@ interface ContactUsProps {
 	setUploading: (v: boolean) => void;
 }
 
-const ContactUs = ({ onSuccess, onError, setUploading }: ContactUsProps) => {
+export const ContactUs = ({ onSuccess, onError, setUploading }: ContactUsProps) => {
 	let form: HTMLFormElement | undefined;
 
 	const sendEmail = (e: Event) => {
