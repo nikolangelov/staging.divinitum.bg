@@ -1234,7 +1234,7 @@ export default function Page() {
 				<div class="flex flex-col flex-items-center flex-self-center mt-6">
 					<button onClick={openModal} class="mr-2 cursor-pointer text-center w-38 lg-w-52 bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Започнете сега</button>
 				</div>
-				<p class="md:font-size-20px font-size-18px c-paper font-500 uppercase mt-6 md:mt-6 text-center line-height-8 md:line-height-10" style="font-family: 'Oswald', sans-serif !important;">*до 7 юли можете да го получите с 300 лв. отстъпка за 2200 лв.</p>
+				<p class="md:font-size-20px font-size-18px c-paper font-500 uppercase mt-6 md:mt-6 text-center line-height-8 md:line-height-10" style="font-family: 'Oswald', sans-serif !important;">*до 22 юни можете да го получите с 300 лв. отстъпка за 2200 лв.</p>
 			</section>
 
 			<section class="pb-10">
