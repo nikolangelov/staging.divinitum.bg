@@ -361,7 +361,8 @@ export const CookieConsent = () => {
   );
 };
 
-export default function LayoutDefault(props: { children?: JSX.Element }) {
+
+  function LayoutDefault(props: { children?: JSX.Element }) {
   const childrenMemo = children(() => props.children)
 
   const [isMenuOpen, setIsMenuOpen] = createSignal(false);
@@ -495,6 +496,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
     </div>
   );
 }
+export default LayoutDefault; // ✅ Add this
 
 function GoogleMapIframe() {
   const mapSrc = `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2933.53860479928!2d23.352789!3d42.671132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85cc743ddfd7%3A0xfdafbdb8cd44f23!2sThe%20Barber%20Shop%20Sofia!5e0!3m2!1sen!2sbg!4v1741095880781!5m2!1sen!2sbg`;
