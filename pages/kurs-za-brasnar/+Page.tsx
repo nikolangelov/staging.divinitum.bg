@@ -378,7 +378,7 @@ function WeekContainer(props: { title: string; secondtitle: JSX.Element | string
 function IconContainer(props: { img: string; alt: string; title: string; }) {
 	return (
 		<div class="mx-auto flex flex-col lg:flex-row justify-center items-center relative gap-2 sm:gap-6 md:gap-10 overflow-hidden">
-			<div class="md:px-16 sm:px-6 sm:pl-1 flex flex-col justify-evenly items-center sm:items-start">
+			<div class="flex flex-col justify-evenly items-center sm:items-start">
 				<div class="b-solid b-4px b-black md:w-230px md:h-230px w-170px h-170px">
 					<div class="bg-paper-inv b-solid b-2px b-#d4af80 flex justify-center items-center m-auto">
 						<img loading="lazy" class="p-10 w-full m-auto" src={props.img} alt={props.alt} />
@@ -597,7 +597,7 @@ export default function Page() {
 									<h2 class="important-pl-0 text-left important-xl:font-size-40px important-md:font-size-30px important-font-size-22px important-xl:leading-56px important-md:leading-45px important-leading-30px important-xl:mb-60px important-md:mb-30px important-mb-15px">Станете професионален бръснар за 4 седмици</h2>
 									<p class="important-xl:font-size-19px important-md:font-size-16px important-font-size-12px important-xl:leading-32px important-md:leading-27px important-leading-19px important-xl:mt-13px important-mt-4px important-mb-8px">Запишете се две седмици преди началото, за да получите 300 лв отстъпка</p>
 									<Countdown />
-									<h3 class="font-400 text-left important-xl:font-size-27px important-md:font-size-22px important-font-size-16px important-xl:mb-20px important-mb-2px">Местата са ограничени!</h3>
+									<h3 class="font-400 text-left important-xl:font-size-27px important-md:font-size-22px important-font-size-16px important-xl:mb-20px important-mb-2px">Остават 8 места.</h3>
 									<p class="important-xl:font-size-19px important-md:font-size-16px important-font-size-12px important-xl:leading-32px important-md:leading-27px important-leading-19px important-xl:mt-13px important-mt-4px important-mb-8px">Запазете мястото си в предстоящото издание на курса като попълните контактната форма.</p>
 								</AnimatedComponent>
 							</div>
@@ -697,7 +697,7 @@ export default function Page() {
 						<H2WithImage class="c-paper" title="Вашият път в бръснарството" />
 					</AnimatedComponent>
 					<AnimatedComponent>
-						<VideoPlayer src='/assets/Barber-Shop-Academy-Subtitled-Video-Lower.mp4' />
+						<VideoPlayer src='/assets/Barber-Shop-Academy-Subtitled-Video Website.mp4' />
 					</AnimatedComponent>
 				</div>
 				<div class="pt-30 flex md-flex flex-col flex-justify-center max-w-1440px lg-px-0 mx-auto lg:pb-10">
@@ -801,7 +801,7 @@ export default function Page() {
 								<p class="important-delay-500 sm-line-height-7 line-height-6.5">Кристиан Митов, или просто Крис, както го знаят всички, е човек, който наистина обича това, което прави. Има над 8 години опит в бранша, където е изградил репутация като професионалист в бръснарството и клиентското обслужване. Започнал е като всички останали – с голямо желание и почти никакъв опит. Черпил е вдъхновение от най-известните бръснари в България и Европа – а днес самия той е сред водещите бръснари.</p>
 								<p class="important-delay-700 sm-line-height-7 line-height-6.5 mb-0">Вярва, че в този занаят никога не спираш да учиш. Ето защо непрекъснато се развива и продължава да участва в разнообразни обучения на American Crew, Depot, както и редица тематични семинари и курсове за бръснари. Натрупаните знания и опит се превръщат в полезни професионални умения. Негова сила в бръснарството са Fade техниките, умелата работа с ножици, оформянето на брада и изграждането на цялостно клиентско изживяване, което кара хората да се връщат.</p>
 								<p class="important-delay-500 sm-line-height-7 line-height-6.5">През годините Кристиан е обучил и въвел в занаята десетки начинаещи, някои от които вече успешно развиват собствена практика. Обучава лично, с фокус и специално внимание върху всеки курсист. Във всеки курс обръща внимание и на не толкова техническите фактори за успех като дисциплината, уважението към занаята и отношението към клиента.</p>
-								<p class="important-delay-700 sm-line-height-7 line-height-6.5 mb-0">Към днешна дата Крис е официален амбасадор на DEPOT, което означава, че представлява италианския бранд в България, работи с техните продукти, провежда съвместни обучения с тях и е избран от самата марка като лице, което въплъщава нейния стил и стандарт. Обменя опит с представители на марката от различни държави и посещава събитията на бранда.</p>
+								<p class="important-delay-700 sm-line-height-7 line-height-6.5 mb-0">Към днешна дата Крис е официален амбасадор на <a href="https://www.depotmaletools.com/en/"  target="_blank" rel="noopener noreferrer" class="c-brand-compliment hover:c-brand-dark font-600 transition-all">DEPOT</a>, което означава, че представлява италианския бранд в България, работи с техните продукти, провежда съвместни обучения с тях и е избран от самата марка като лице, което въплъщава нейния стил и стандарт. Обменя опит с представители на марката от различни държави и посещава събитията на бранда.</p>
 							</AnimatedComponent>
 						</div>
 
@@ -816,15 +816,15 @@ export default function Page() {
 
 			<section style="background-image: url(/assets/thebarbershop-dark-bg.webp); background-position: center; background-repeat: no-repeat; background-size: cover;"
 				class="w-full mx-auto md:px-30">
-				<div class="mx-auto flex flex-justify-center flex-items-center py-5 md:py-15 px-5 max-w-1000px">
+				<div class="mx-auto flex flex-justify-center flex-items-center py-5 md:py-15 px-5 max-w-1200px">
 					<div class="flex flex-col justify-center items-center h-150px w-33% py-2 px-6 border-1px b-l-solid b-r-solid border-[rgba(255,255,255,0.5)]">
 						<p class="important-mt-0 pt-2 md:pt-0 font-size-30px md:font-size-45px text-center font-600 mb-0 mt-5 c-brand" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">8+</p>
 						<p class="font-size-15px md:font-size-20px text-center font-500 mt-3 md:mt-7 uppercase c-paper line-height-6" style="font-family: 'Oswald', sans-serif !important;">Години опит</p>
 					</div>
 
 					<div class="flex flex-col justify-center items-center h-150px w-33% py-2 px-6">
-						<p class="important-mt-0 font-size-30px md:font-size-45px text-center font-600 mb-0 mt-5 c-brand line-height-10" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Depot Milano</p>
-						<p class="font-size-15px md:font-size-20px text-center font-500 mt-3 md:mt-7 uppercase c-paper" style="font-family: 'Oswald', sans-serif !important;">Амбасадор</p>
+						<p class="important-mt-0 font-size-30px md:font-size-45px text-center font-600 mb-0 mt-5 c-brand md:line-height-14 line-height-8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">The Barber Shop</p>
+						<p class="font-size-15px md:font-size-20px text-center font-500 mt-3 md:mt-5 uppercase c-paper" style="font-family: 'Oswald', sans-serif !important;">Собственик</p>
 					</div>
 
 					<div class="flex flex-col justify-center items-center h-150px w-33% py-2 px-6 border-1px b-l-solid b-r-solid border-[rgba(255,255,255,0.5)]">
@@ -937,15 +937,15 @@ export default function Page() {
 					<H2WithImage title="Резултатите от курса за бръснар не закъсняват" />
 					<AllKindsSlider
 						services={[
-							{ title: "Philip Betz" },
+							{ title: "Asen Markov" },
 							{ title: "Ivan Kotrulev" },
 							{ title: "Ivaylo Hristov (Ivo)" },
 						]}>
 						<QuotationReview
-							hrefGoogleReview="https://maps.app.goo.gl/2GD7Gw3npQEQYSj47"
-							profile="https://lh3.googleusercontent.com/a-/ALV-UjWRMyY5JVHgV1XDqoizRaK1VdNS7x3lLWZ7c5dic3EtAAHs6_Zz=w36-h36-p-rp-mo-br100"
-							name="Philip Betz"
-							text="Много ми хареса прическата! Всички които ме виждаха, казваха, че много ми отива. Плюс това атмосферата там е много приятна, хората са забавни и дружелюбни."
+							hrefGoogleReview="https://maps.app.goo.gl/HF71MR2mEbctZBsX6"
+							profile="https://lh3.googleusercontent.com/a-/ALV-UjVNDhtrnw5PqjQYpupZ9gZDhWdFOkC20uGd9DQ6fIy7oajD-zMJ=w36-h36-p-rp-mo-br100"
+							name="Asen Markov"
+							text="Перфектното място за мъжки отдих. Посрещнаха ме с вежливо обслужване и приятелска атмосфера. Работата им е на много високо ниво с внимание към детайла. Преопоръчвам!"
 						/>
 						<QuotationReview
 							hrefGoogleReview="https://maps.app.goo.gl/vH9kVeo1hg5hGpDh9"
@@ -1018,9 +1018,9 @@ export default function Page() {
 				<AnimatedComponent>
 					<H2WithImage title="Какво можете да очаквате от курса за бръснарство" />
 				</AnimatedComponent>
-				<div class="md:max-w-900px mx-auto grid grid-cols-2 gap-5 md:gap-20 px-5 lg:grid-cols-3">
+				<div class="md:max-w-900px mx-auto grid grid-cols-2 gap-5 md:gap-20 px-5 lg:grid-cols-3 ">
 					<IconContainer
-						title="Индивидуално обучение"
+						title="Менторство"
 						img="/assets/akademia/individual-black-icon.webp"
 						alt="Курс за бръснари"
 					/>
@@ -1088,7 +1088,7 @@ export default function Page() {
 							title="Обща информация"
 							secondtitle={
 								<>
-									Обучението се провежда в рамките на <span class="whitespace-nowrap sm:whitespace-normal">22 дни</span>.
+									Обучението се провежда от понеделник до петък в рамките на <span class="whitespace-nowrap sm:whitespace-normal">4 седмици</span>.
 								</>
 							}
 							text={
@@ -1216,7 +1216,7 @@ export default function Page() {
 
 					<div class="w-full md:w-1/2 flex flex-col gap-5">
 						<div>
-							<h3 class="pb-4 c-paper uppercase text-left important-mt-0">Какво включва курсът курсът за бръснар:</h3>
+							<h3 class="pb-4 c-paper uppercase text-left important-mt-0">Какво включва курсът за бръснар:</h3>
 							<CheckBoxText text="4 седмици интензивно обучение върху реални модели." />
 							<CheckBoxText text="Преподавател бръснар с над 8 години зад гърба си." />
 							<CheckBoxText text="Fade, ножица, брада, бръснач – основните техники стъпка по стъпка." />
@@ -1225,7 +1225,7 @@ export default function Page() {
 						</div>
 						<div class="pt-8.5">
 							<h3 class="pb-4 c-paper uppercase text-left">Бонус:</h3>
-							<CheckBoxText text="Сертификат за бръснар + портфолио, с които можете да изпъкнете." />
+							<CheckBoxText text="Сертификат за бръснар и портфолио, с които можете да изпъкнете." />
 							<CheckBoxText text="Възможност за стаж или препоръка от The Barber Shop." />
 						</div>
 					</div>

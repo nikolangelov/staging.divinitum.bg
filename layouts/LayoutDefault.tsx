@@ -362,7 +362,7 @@ export const CookieConsent = () => {
 };
 
 
-  function LayoutDefault(props: { children?: JSX.Element }) {
+function LayoutDefault(props: { children?: JSX.Element }) {
   const childrenMemo = children(() => props.children)
 
   const [isMenuOpen, setIsMenuOpen] = createSignal(false);
@@ -535,22 +535,22 @@ function TopFooter() {
             </AnimatedComponent>
 
             <AnimatedComponent class="flex flex-col text-center lg-w-22%">
+              <RiTimerFill class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
+              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                Работно време:
+              </div>
+              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                Понеделник - Неделя:<br />10:00 - 20:00
+              </div>
+            </AnimatedComponent>
+
+            <AnimatedComponent class="flex flex-col text-center lg-w-22%">
               <MdiPhoneClassic class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
               <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
                 Телефон:
               </div>
               <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
                 +359 882 820 331
-              </div>
-            </AnimatedComponent>
-
-            <AnimatedComponent class="flex flex-col text-center lg-w-22%">
-              <RiTimerFill class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
-              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                Работно време:
-              </div>
-              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                Понеделник - Неделя: 10:00 - 20:00
               </div>
             </AnimatedComponent>
           </div>
