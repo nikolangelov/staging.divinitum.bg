@@ -5,7 +5,6 @@ import Head from "../../layouts/Head";
 
 // Default config (can be overridden by pages)
 export default {
-  Layout,
   Head,
   // <title>
   // <meta name="description">
