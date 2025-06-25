@@ -513,8 +513,9 @@ export function Countdown() {
 	});
 
 	function calculateTimeLeft() {
-		const targetDate = new Date(new Date().getFullYear(), 5, 23); // June = month 5 (0-indexed)
 		const now = new Date();
+		const targetDate = new Date(now.getFullYear(), 5, 30, 23, 59, 59); // June 30, 23:59:59
+
 		const difference = targetDate.getTime() - now.getTime();
 
 		if (difference <= 0) {
@@ -540,6 +541,7 @@ export function Countdown() {
 		</div>
 	);
 }
+
 
 
 
