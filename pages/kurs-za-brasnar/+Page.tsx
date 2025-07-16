@@ -709,9 +709,9 @@ export default function Page() {
 							<div class="w-full xl:w-1/2 md:w-2/5 w-full flex flex-col justify-center lg:justify-start items-center lg:items-start">
 								<AnimatedComponent>
 									<h2 class="important-pl-0 text-left important-xl:font-size-40px important-md:font-size-30px important-font-size-22px important-xl:leading-56px important-md:leading-45px important-leading-30px important-xl:mb-60px important-md:mb-30px important-mb-15px">Станете професионален бръснар за 4 седмици</h2>
-									<p class="important-xl:font-size-19px important-md:font-size-16px important-font-size-12px important-xl:leading-32px important-md:leading-27px important-leading-19px important-xl:mt-13px important-mt-4px important-mb-8px">Запишете се две седмици преди началото, за да получите 300 лв отстъпка</p>
-									<Countdown />
-									<h3 class="font-400 text-left important-xl:font-size-27px important-md:font-size-22px important-font-size-16px important-xl:mb-20px important-mb-2px">Остават 8 места.</h3>
+									{/* <p class="important-xl:font-size-19px important-md:font-size-16px important-font-size-12px important-xl:leading-32px important-md:leading-27px important-leading-19px important-xl:mt-13px important-mt-4px important-mb-8px">Запишете се две седмици преди началото, за да получите 300 лв отстъпка</p>
+									<Countdown /> */}
+									<h3 class="font-400 text-left important-xl:font-size-27px important-md:font-size-22px important-font-size-16px important-xl:mb-20px important-mb-2px">Остават 4 места.</h3>
 									<p class="important-xl:font-size-19px important-md:font-size-16px important-font-size-12px important-xl:leading-32px important-md:leading-27px important-leading-19px important-xl:mt-13px important-mt-4px important-mb-8px">Запазете мястото си в предстоящото издание на курса като попълните контактната форма.</p>
 								</AnimatedComponent>
 							</div>
@@ -1293,10 +1293,10 @@ export default function Page() {
 						<div class="flex flex-row flex-justify-start items-center">
 							<MdiProgressClock class="md:mt-1 flex flex-self-center mr-0 lg:mr-8 lg-w-7 w-15 c-brand font-size-6" />
 							<h3 class="md:px-0 px-0 text-left c-paper important-line-height-7 important-font-size-4 important-md:font-size-6 lg:flex hidden flex-justify-center flex-items-center uppercase important-mb-0 important-md:mb-5 important-xl:mb-6 font-500" style="font-family: 'Oswald', sans-serif !important;">
-								Първа дата: 7 юли 2025 г. 09:00 - 13:00
+								Първа дата: 16 август 2025 г. 09:00 - 15:00
 							</h3>
 							<h3 class="md:px-0 px-0 text-left c-paper important-line-height-6.5 important-font-size-4 important-md:font-size-5 flex lg:hidden flex-justify-center flex-items-center uppercase important-my-5 important-sm:mb-5 font-500" style="font-family: 'Oswald', sans-serif !important;">
-								Първа дата:<br />7 юли 2025 г.<br />09:00 - 13:00
+								Първа дата:<br />16 август 2025 г.<br />09:00 - 15:00
 							</h3>
 						</div>
 						<div class="flex flex-col flex-items-center flex-self-center">
@@ -1312,10 +1312,10 @@ export default function Page() {
 						<div class="flex flex-row flex-justify-start items-center">
 							<MdiProgressClock class="md:mt-1 flex flex-self-center mr-0 lg:mr-8 lg-w-7 w-15 c-brand font-size-6" />
 							<h3 class="md:px-0 px-0 text-left c-paper important-line-height-7 important-font-size-4 important-md:font-size-6 lg:flex hidden flex-justify-center flex-items-center uppercase important-mb-0 important-md:mb-5 important-xl:mb-6 font-500" style="font-family: 'Oswald', sans-serif !important;">
-								Втора дата: 14 юли 2025 г. 17:30 - 21:30
+								Втора дата: 15 септември 2025 г. 17:30 - 21:30
 							</h3>
 							<h3 class="md:px-0 px-0 text-left c-paper important-line-height-6.5 important-font-size-4 important-md:font-size-5 flex lg:hidden flex-justify-center flex-items-center uppercase important-my-5 important-sm:mb-5 font-500" style="font-family: 'Oswald', sans-serif !important;">
-								Втора дата:<br />14 юли 2025 г.<br />17:30 - 21:30
+								Втора дата:<br />15 септември 2025 г.<br />17:30 - 21:30
 							</h3>
 						</div>
 						<div class="flex flex-col flex-items-center flex-self-center">
