@@ -1040,7 +1040,7 @@ export default function Page() {
 							<div class="relative">
 								<img loading="lazy" src="/assets/akademia/контакт-за-курс-за-бръснарство.webp" alt="Elegant interior design" class="w-full h-auto shadow-xl" />
 							</div>
-							<p class="c-paper mt-0 md:font-size-14px font-size-12px md:leading-6 leading-5">Занятията ще се провеждат The Barber Shop Academy<br />на <span class="c-brand underline">бул. Константин Величков</span> (непосредствена близост до метростанцията)</p>
+							<p class="c-paper mt-0 md:font-size-15px font-size-14px md:leading-6 leading-5">Занятията ще се провеждат The Barber Shop Academy на <span class="c-brand underline whitespace-nowrap"><a class="c-brand hover:c-brand-dark transition-all underline whitespace-nowrap" href="https://maps.app.goo.gl/yZNJRc35cSPyztpaA" target="_blank" rel="noopener"><img class="w-5 h-5 mb--1.5" src="/assets/pin.png"/>ул. Алдомировска 77</a></span> (непосредствена близост до метростанция “Константин Величков”)</p>
 						</AnimatedComponent>
 					</div>
 
@@ -1205,12 +1205,8 @@ export default function Page() {
 					<H2WithImage title="Програма и продължителност на бръснарската академия" />
 					<div class="flex justify-center md:justify-start items-start pb-10 md:pb-20 px-5 md:px-15">
 						<WeekContainer
-							title="Обща информация"
-							secondtitle={
-								<>
-									Гъвкаво обучение
-								</>
-							}
+							title="Гъвкаво обучение"
+							secondtitle=""
 							text={
 								<>
 									Обучението се провежда в два формата:
@@ -1321,7 +1317,7 @@ export default function Page() {
 						<div class="flex">
 							<ul class="ml--2 lg:ml--6">
 								<li class="c-paper">Обучението се провежда в рамките на 5 уикенда</li>
-								<li class="c-paper">Всяка събота и неделя, по 6 часа на ден</li>
+								<li class="c-paper">Всяка събота и неделя, <span class="whitespace-nowrap sm:whitespace-normal">по 6 часа на ден</span></li>
 								<li class="c-paper">Общата продължителност на курса е 60 часа</li>
 							</ul>
 						</div>
@@ -1353,7 +1349,7 @@ export default function Page() {
 						<div class="flex">
 							<ul class="ml--2 lg:ml--6">
 								<li class="c-paper">Вечерен курс през делничните дни</li>
-								<li class="c-paper">От понеделник до петък, по 4 часа на ден</li>
+								<li class="c-paper">От понеделник до петък, <span class="whitespace-nowrap sm:whitespace-normal">по 4 часа на ден</span></li>
 								<li class="c-paper">Общата продължителност на курса е 80 часа</li>
 							</ul>
 						</div>
