@@ -1038,7 +1038,7 @@ export default function Page() {
 
 						<AnimatedComponent class="w-full md:w-1/2 block">
 							<div class="relative">
-								<img loading="lazy" src="/assets/akademia/контакт-за-курс-за-бръснарство.webp" alt="Elegant interior design" class="w-full h-auto shadow-xl" />
+								<img loading="lazy" src="/assets/akademia/за-курс-за-бръснарство.webp" alt="Реални снимки от академията" class="w-full h-auto shadow-xl" style="filter: saturate(130%);" />
 							</div>
 							<p class="c-paper mt-0 md:font-size-15px font-size-14px md:leading-6 leading-5">Занятията ще се провеждат The Barber Shop Academy на <span class="c-brand underline whitespace-nowrap"><a class="c-brand hover:c-brand-dark transition-all underline whitespace-nowrap" href="https://maps.app.goo.gl/yZNJRc35cSPyztpaA" target="_blank" rel="noopener"><img class="w-5 h-5 mb--1.5" src="/assets/pin.png"/>ул. Алдомировска 77</a></span> (непосредствена близост до метростанция “Константин Величков”)</p>
 						</AnimatedComponent>
