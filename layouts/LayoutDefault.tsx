@@ -367,7 +367,6 @@ function LayoutDefault(props: { children?: JSX.Element }) {
 
   const [isMenuOpen, setIsMenuOpen] = createSignal(false);
   const [servicesMenuOpen, setServicesMenuOpen] = createSignal(false);
-  const [aboutMenuOpen, setAboutMenuOpen] = createSignal(false);
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -496,7 +495,7 @@ function LayoutDefault(props: { children?: JSX.Element }) {
     </div>
   );
 }
-export default LayoutDefault; // ✅ Add this
+export default LayoutDefault;
 
 function GoogleMapIframe() {
   const mapSrc = `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2933.53860479928!2d23.352789!3d42.671132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85cc743ddfd7%3A0xfdafbdb8cd44f23!2sThe%20Barber%20Shop%20Sofia!5e0!3m2!1sen!2sbg!4v1741095880781!5m2!1sen!2sbg`;
@@ -530,7 +529,9 @@ function TopFooter() {
                 Адрес:
               </div>
               <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                София, ул. "Николай Хайтов" 2
+                <a href="https://maps.app.goo.gl/MipZUcXdb3kAeht68" target="_blank" class="c-paper hover-c-brand transition-colors underline" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                  София, ул. "Николай Хайтов" 2
+                  </a>
               </div>
             </AnimatedComponent>
 
@@ -550,7 +551,9 @@ function TopFooter() {
                 Телефон:
               </div>
               <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                +359 882 820 331
+                <a href="tel:+359882820331" class="c-paper hover-c-brand transition-colors underline" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                  +359 882 820 331
+                </a>
               </div>
             </AnimatedComponent>
           </div>

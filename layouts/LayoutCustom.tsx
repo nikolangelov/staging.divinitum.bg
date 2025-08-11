@@ -774,7 +774,9 @@ function TopFooter() {
                 Адрес:
               </div>
               <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                София, ул. “Алдомировска” 77
+                <a href="https://maps.app.goo.gl/5Jg7kwUH2xpc8jvm8" target="_blank" class="c-paper hover-c-brand transition-colors underline" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                  София, ул. “Алдомировска” 77
+                </a>
               </div>
             </AnimatedComponent>
 
@@ -797,7 +799,9 @@ function TopFooter() {
                 Телефон:
               </div>
               <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                +359 882 820 331
+                <a href="tel:+359882820331" class="c-paper hover-c-brand transition-colors underline" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                  +359 882 820 331
+                </a>
               </div>
             </AnimatedComponent>
           </div>
