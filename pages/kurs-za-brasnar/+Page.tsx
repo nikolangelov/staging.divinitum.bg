@@ -710,7 +710,7 @@ export default function Page() {
 									<h2 class="important-pl-0 text-left important-xl:font-size-40px important-md:font-size-30px important-font-size-22px important-xl:leading-56px important-md:leading-45px important-leading-30px important-xl:mb-60px important-md:mb-30px important-mb-15px">Станете професионален бръснар за 4 седмици</h2>
 									{/* <p class="important-xl:font-size-19px important-md:font-size-16px important-font-size-12px important-xl:leading-32px important-md:leading-27px important-leading-19px important-xl:mt-13px important-mt-4px important-mb-8px">Запишете се две седмици преди началото, за да получите 300 лв отстъпка.</p>
 									<Countdown /> */}
-									<h3 class="font-400 text-left important-xl:font-size-27px important-md:font-size-22px important-font-size-16px important-xl:mb-20px important-mb-2px">Остава 1 място.</h3>
+									<h3 class="font-400 text-left important-xl:font-size-27px important-md:font-size-22px important-font-size-16px important-xl:mb-20px important-mb-2px">Остават 4 места.</h3>
 									<p class="important-xl:font-size-19px important-md:font-size-16px important-font-size-12px important-xl:leading-32px important-md:leading-27px important-leading-19px important-xl:mt-13px important-mt-4px important-mb-8px">Запазете мястото си в предстоящото издание на курса като попълните контактната форма.</p>
 								</AnimatedComponent>
 							</div>
@@ -1039,7 +1039,7 @@ export default function Page() {
 							<div class="relative">
 								<img loading="lazy" src="/assets/akademia/за-курс-за-бръснарство.webp" alt="Реални снимки от академията" class="w-full h-auto shadow-xl" style="filter: saturate(130%);" />
 							</div>
-							<p class="c-paper mt-0 md:font-size-17px font-size-14px md:leading-7 leading-5">Занятията ще се провеждат The Barber Shop Academy на <span class="c-brand underline whitespace-nowrap"><a class="c-brand hover:c-brand-dark transition-all underline whitespace-nowrap" href="https://maps.app.goo.gl/yZNJRc35cSPyztpaA" target="_blank" rel="noopener"><img class="w-5 h-5 mb--1.5" src="/assets/pin.png"/>ул. Алдомировска 77</a></span> (непосредствена близост до метростанция “Константин Величков”)</p>
+							<p class="c-paper mt-0 md:font-size-17px font-size-14px md:leading-7 leading-5">Занятията ще се провеждат The Barber Shop Academy на <span class="c-brand underline whitespace-nowrap"><a class="c-brand hover:c-brand-dark transition-all underline whitespace-nowrap" href="https://maps.app.goo.gl/yZNJRc35cSPyztpaA" target="_blank" rel="noopener"><img class="w-5 h-5 mb--1.5" src="/assets/pin.png" />ул. Алдомировска 77</a></span> (непосредствена близост до метростанция “Константин Величков”)</p>
 						</AnimatedComponent>
 					</div>
 
@@ -1294,7 +1294,7 @@ export default function Page() {
 
 			<section class="py-5" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url(/assets/brown-background-image.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<AnimatedComponent class="mx-5 md-mx-30 flex flex-col gap-2">
-					<div class="flex flex-col w-full pr-10px xl:px-50px lg:px-30px md:py-4 py-6 lg:py-6 max-w-1320px mx-auto flex-justify-between flex-items-start b-solid b-2px hover-b-gray-500 flex my-8 b-paper bg-#14100c hover-bg-transparent transition-colors important-transition-duration-300">
+					<div class="flex flex-col w-full pr-10px xl:px-50px lg:px-30px md:py-4 py-6 lg:py-6 max-w-1320px mx-auto flex-justify-between flex-items-start b-solid b-2px flex my-8 b-paper bg-#14100c transition-colors important-transition-duration-300">
 						<div class="flex w-full mx-auto flex-justify-between flex-items-center">
 							<div class="flex flex-row flex-justify-start items-center">
 								<div class="flex flex-col">
@@ -1310,7 +1310,7 @@ export default function Page() {
 								</div>
 							</div>
 							<div class="flex flex-col flex-items-center flex-self-center">
-								<button onClick={openModal} class="mr-2 cursor-pointer text-center w-32 lg-w-52 bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Започнете сега</button>
+								<button class="mr-2 cursor-default text-center w-32 lg-w-52 bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-5 font-500 py-3 transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Започнал</button>
 							</div>
 						</div>
 						<div class="flex">
@@ -1350,6 +1350,38 @@ export default function Page() {
 								<li class="c-paper">Вечерен курс през делничните дни</li>
 								<li class="c-paper">От понеделник до петък, <span class="whitespace-nowrap sm:whitespace-normal">по 4 часа на ден</span></li>
 								<li class="c-paper">Общата продължителност на курса е 80 часа</li>
+							</ul>
+						</div>
+					</div>
+				</AnimatedComponent>
+			</section>
+
+			<section class="py-5" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url(/assets/brown-background-image.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
+				<AnimatedComponent class="mx-5 md-mx-30 flex flex-col gap-2">
+					<div class="flex flex-col w-full pr-10px xl:px-50px lg:px-30px md:py-4 py-6 lg:py-6 max-w-1320px mx-auto flex-justify-between flex-items-start b-solid b-2px hover-b-gray-500 flex my-8 b-paper bg-#14100c hover-bg-transparent transition-colors important-transition-duration-300">
+						<div class="flex w-full mx-auto flex-justify-between flex-items-center">
+							<div class="flex flex-row flex-justify-start items-center">
+								<div class="flex flex-col">
+									<div class="flex items-center">
+										<MdiProgressClock class="md:mt-1 flex flex-self-center mr-0 lg:mr-8 lg-w-7 w-15 c-brand font-size-6" />
+										<h3 class="md:px-0 px-0 text-left c-paper important-line-height-7 important-font-size-4 important-md:font-size-6 lg:flex hidden flex-justify-center flex-items-center uppercase important-mb-0 important-md:mb-5 important-xl:mb-6 font-500" style="font-family: 'Oswald', sans-serif !important;">
+											Уикенд курс: 18 август 2025 г. 09:00 - 15:00
+										</h3>
+										<h3 class="md:px-0 px-0 text-left c-paper important-line-height-6.5 important-font-size-4 important-md:font-size-5 flex lg:hidden flex-justify-center flex-items-center uppercase important-my-5 important-sm:mb-5 font-500" style="font-family: 'Oswald', sans-serif !important;">
+											Уикенд курс:<br />18 август 2025 г.<br />09:00 - 15:00
+										</h3>
+									</div>
+								</div>
+							</div>
+							<div class="flex flex-col flex-items-center flex-self-center">
+								<button onClick={openModal} class="mr-2 cursor-pointer text-center w-32 lg-w-52 bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Започнете сега</button>
+							</div>
+						</div>
+						<div class="flex">
+							<ul class="ml--2 lg:ml--6">
+								<li class="c-paper">Обучението се провежда в рамките на 5 уикенда</li>
+								<li class="c-paper">Всяка събота и неделя, <span class="whitespace-nowrap sm:whitespace-normal">по 6 часа на ден</span></li>
+								<li class="c-paper">Общата продължителност на курса е 60 часа</li>
 							</ul>
 						</div>
 					</div>
