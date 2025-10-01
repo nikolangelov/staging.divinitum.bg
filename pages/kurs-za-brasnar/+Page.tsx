@@ -235,11 +235,7 @@ function SingleCollapse() {
 					</div>
 				</Collapse>
 
-				<Collapse title="Предлагате ли разсрочено плащане или отстъпки за бръснарската академия?" desc="Да! Ако се запишете до две седмици преди началото на курса, получавате отстъпка от 300 лв., т.е. вместо 2500 лв., плащате само 2200 лв." >
-					<div class="mt-4">
-						Ако предпочитате разсрочено плащане, можете да вземете курса на 3, 6 или 12 вноски без оскъпяване чрез партньорството ни с TBI Bank. Одобрението отнема само няколко минути, няма скрити такси и можете да стартирате веднага след потвърждение.
-					</div>
-				</Collapse>
+				<Collapse title="Предлагате ли разсрочено плащане за бръснарската академия?" desc="Да! Можете да вземете курса на 3, 6 или 12 вноски без оскъпяване чрез партньорството ни с TBI Bank. Одобрението отнема само няколко минути, няма скрити такси и можете да стартирате веднага след потвърждение." />
 			</div>
 		</>
 	);
@@ -1310,7 +1306,7 @@ export default function Page() {
 								</div>
 							</div>
 							<div class="flex flex-col flex-items-center flex-self-center">
-								<button class="mr-2 cursor-default text-center w-32 lg-w-52 bg-#913f4a c-paper b-solid b-2px b-#913f4a uppercase font-size-4 lg-font-size-5 font-500 py-3 transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Започнал</button>
+								<button class="mr-2 cursor-default text-center w-32 lg-w-52 bg-#967a7d c-paper b-solid b-2px b-#967a7d uppercase font-size-4 lg-font-size-5 font-500 py-3 transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Приключил</button>
 							</div>
 						</div>
 						<div class="flex">
@@ -1417,7 +1413,6 @@ export default function Page() {
 				<div class="flex flex-col flex-items-center flex-self-center mt-6">
 					<button onClick={openModal} class="mr-2 cursor-pointer text-center w-42 lg-w-52 bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Започнете сега</button>
 				</div>
-				<p class="md:font-size-20px font-size-18px c-paper font-500 uppercase mt-6 md:mt-6 text-center line-height-8 md:line-height-10" style="font-family: 'Oswald', sans-serif !important;">*До 2 август можете да го получите с 300 лв. отстъпка за 2200 лв.</p>
 			</section>
 
 			<section class="pb-10">
