@@ -478,7 +478,7 @@ export default function Page() {
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="c-brand text-left mt-0">Опитни и квалифицирани бръснари</h3>
-									<div class="pb-8 c-paper">Екипът на <strong>The Barber Shop</strong> се състои от млади, целеустремени и <strong>непрекъснато развиващи се бръснари</strong>. Всеки един от тях е преминал интензивно обучение, усвоявайки <strong>“езика на бръснарството”</strong>. С <strong>професионализъм, лично отношение и внимание към детайла</strong> могат да пресъздадат всяка визия съобразена с предпочитанията и чертите Ви. Включете се в семейната традиция на <strong>The Barber Shop</strong> – подстригване на баща и син и изживейте <strong>специални моменти с Вашето дете</strong>.
+									<div class="pb-8 c-paper">Екипът на <strong>The Barber Shop</strong> се състои от млади, целеустремени и <strong>непрекъснато развиващи се бръснари.</strong> Всеки един от тях е преминал интензивно обучение в <a class="underline c-brand hover:c-brand-dark transition-all" href="/kurs-za-brasnar">The Barber Shop Academy,</a> усвоявайки <strong>“езика на бръснарството”.</strong> Това означава, че когато обясните на бръснаря какво искате, той знае как да го направи и може да Ви каже дали ще стои добре предвид Вашата форма на лицето и типа на косата. Включете се в семейната традиция на <strong>The Barber Shop</strong> – подстригване на баща и син и изживейте <strong>специални моменти с вашето дете.</strong>
 									</div>
 								</AnimatedComponent>
 							</div>

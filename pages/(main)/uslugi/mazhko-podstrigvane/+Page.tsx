@@ -223,7 +223,7 @@ export default function Page() {
 								<h1 class="uppercase c-paper mb-6 text-center">Мъжко подстригване</h1>
 							</AnimatedComponent>
 							<AnimatedComponent>
-								<p class="important-delay-300 c-paper text-center lg-pt-10 font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7">В <span class="c-brand  font-900" style="font-family: 'Roboto'">The Barber Shop</span> не просто подстригваме. Предлагаме Ви преживяване, което съчетава удобство, майсторство и прецизност. С помощта на нашите бръснари ще определим стил на мъжкото подстригване, който не само подхожда на чертите Ви, но и отразява кой сте Вие.</p>
+								<p class="important-delay-300 c-paper text-center lg-pt-10 font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7">В <span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop</span> подстригването е повече от рутинна процедура. При нас ще видите разликата още от първия миг. Още с влизането ще усетите автентична мъжка атмосфера, прецизни движения с машинката и усещане, че сте на правилното място.</p>
 								<p class="important-delay-500 c-paper text-center font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7">Нашата цел е да видите в огледалото мъж, който изглежда точно толкова добре, колкото се чувства.</p></AnimatedComponent>
 						</div>
 					</div>
@@ -232,7 +232,7 @@ export default function Page() {
 
 			<div class="pb-10" style="background-image: url(/assets/thebarbershop-dark-bg.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<AnimatedComponentSlide>
-					<H2WithImage class="c-paper" title="Бръснарница от класа" />
+					<H2WithImage class="c-paper" title="Какво Ви очаква по време на мъжкото подстригване:" />
 				</AnimatedComponentSlide>
 				<AnimatedComponentSlide>
 					<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col gap-6 lg-gap-13 flex-items-center">
@@ -482,19 +482,19 @@ export default function Page() {
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="c-brand text-left mt-0">Опитни и квалифицирани бръснари</h3>
-									<div class="pb-8 c-paper">Екипът на The Barber Shop се състои от млади, целеустремени и непрекъснато развиващи се бръснари. Всеки един от тях е преминал интензивно обучение, усвоявайки “езика на бръснарството” и тънкостите в стайлинга за мъже. С професионализъм, лично отношение и внимание към детайла могат да пресъздадат всяка визия съобразена с предпочитанията и чертите Ви.</div>
+									<div class="pb-8 c-paper">Екипът на <span class="font-600">The Barber Shop</span> се състои от <span class="font-600">млади, целеустремени и непрекъснато развиващи се бръснари.</span> Всеки един от тях е преминал интензивно обучение в <a class="underline c-brand hover:c-brand-dark transition-all" href="/kurs-za-brasnar">The Barber Shop Academy,</a> усвоявайки <span class="font-600">“езика на бръснарството”</span> и тънкостите в стайлинга за мъже. Това означава, че когато обясните на бръснаря какво искате, той знае как да го направи и може да Ви каже дали ще стои добре предвид Вашата форма на лицето и типа на косата.</div>
 								</AnimatedComponent>
 							</div>
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="c-brand text-left mt-5 lg-mt-0">Професионални инструменти</h3>
-									<div class="pb-8 c-paper">В The Barber Shop ценим високото качество затова използваме само най-добрите професионални инструменти. Нашите бръснарски ножици, бръсначи и машинки са избрани с внимание към детайлите, като залагаме на световно признати марки като Wahl, Andis, Oster, BabylissPRO, гарантиращи отлично изпълнение на класическите мъжки прически. Нашата бръснарница е мястото, където стилът и прецизността са водещ фактор.</div>
+									<div class="pb-8 c-paper">В <span class="font-600">The Barber Shop</span> ценим високото качество затова използваме само най-добрите <span class="font-600">професионални инструменти.</span> Смятаме, че когато инструментите са точни, резултатът е отличен. Използваме машинки и бръсначи от утвърдени марки като <span class="font-600">Wahl, Andis и BabylissPRO,</span> които гарантират плавно движение и чисти линии. Това означава по-меко усещане при бръснене и изчистен финиш при подстригване.</div>
 								</AnimatedComponent>
 							</div>
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="c-brand text-left mt-5 lg-mt-0">Висококачествена козметика</h3>
-									<div class="pb-8 c-paper">Перфектната визия започва със здрава кожа и коса. Ето защо ние работим с марки като Depot, American crew, Lavish, специализирани в мъжката козметика, с изчистен състав и благоприятно действие върху косата и кожата. Асортиментът ни включва подхранващи шампоани, хидратиращи балсами, както и стилизиращи продукти за всеки тип коса и брада, които гарантират че прическата Ви ще запази вида си дълго след мъжкото подстригване.</div>
+									<div class="pb-8 c-paper">Перфектната визия започва със <span class="font-600">здрава кожа и коса.</span> Ето защо ние работим с марки като <span class="font-600">Depot, American crew и Lavish,</span> специализирани в мъжката козметика, с <span class="font-600">изчистен състав</span> и <span class="font-600">благоприятно действие върху косата и кожата.</span> Асортиментът ни включва <span class="font-600">подхранващи шампоани, хидратиращи балсами,</span> както и стилизиращи <span class="font-600">продукти за всеки тип коса и брада,</span> които гарантират че прическата Ви ще запази вида си дълго след мъжкото подстригване.</div>
 								</AnimatedComponent>
 							</div>
 						</div>

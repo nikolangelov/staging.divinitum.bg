@@ -242,7 +242,7 @@ export default function Page() {
 								<h1 class="uppercase c-paper mb-6 text-center">Бръснене на глава с бръснач</h1>
 							</AnimatedComponent>
 							<AnimatedComponent>
-								<p class="important-delay-300 c-paper text-center lg-pt-10 font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7">Подарете си <span class="c-brand font-500" style="font-family: 'Roboto'">бръснене на глава с бръснач</span> за гладко и свежо усещане. Ние от The Barber Shop Sofia подхождаме с внимание и грижа към всеки детайл. С помощта на премиум продукти, инструменти и топ бръснари гарантираме изключително гладък резултат и здрава кожа.</p>
+								<p class="important-delay-300 c-paper text-center lg-pt-10 font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7">Време е за истински refresh. Подарете си бръснене на глава с бръснач за гладко и свежо усещане. Този метод намалява раздразненията и осигурява супер резултат и комфорт дълго след процедурата.</p>
 							</AnimatedComponent>
 						</div>
 					</div>
@@ -517,7 +517,7 @@ export default function Page() {
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="c-brand text-left mt-0">Опитни и квалифицирани бръснари</h3>
-									<div class="pb-8 c-paper">Съгласни сме с твърдението, че <strong>истинското майсторство идва с опита</strong>, особено когато става въпрос за деликатни процедури като бръснене на глава с бръснач. Затова нашият екип се състои от внимателно подбрани <strong>талантливи бръснари</strong>. Всеки един от нас е преминал през интензивно обучение и продължава да усъвършенства уменията си ежедневно. С нашите <strong>умения и отдаденост</strong>, можете да бъдете сигурни, че сте в най-добрите ръце.
+									<div class="pb-8 c-paper">Съгласни сме с твърдението, че <span class="font-600">истинското майсторство идва с опита,</span> особено когато става въпрос за деликатни процедури като бръснене на глава с бръснач. Затова нашият екип се състои от внимателно подбрани <span class="font-600">талантливи бръснари.</span> Всеки един от нас е преминал през интензивно обучение в <a class="underline c-brand hover:c-brand-dark transition-all" href="/kurs-za-brasnar">The Barber Shop Academy</a> и продължава да усъвършенства уменията си ежедневно. С нашите <span class="font-600">умения и отдаденост,</span> можете да бъдете сигурни, че сте в най-добрите ръце.
 									</div>
 								</AnimatedComponent>
 							</div>

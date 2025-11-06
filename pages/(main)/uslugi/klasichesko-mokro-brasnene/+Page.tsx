@@ -271,7 +271,7 @@ export default function Page() {
 								<h1 class="uppercase c-paper mb-6 text-center">Класическо мокро бръснене</h1>
 							</AnimatedComponent>
 							<AnimatedComponent>
-								<p class="important-delay-300 c-paper text-center lg-pt-10 font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7"><span class="c-brand font-500" style="font-family: 'Roboto'">Класическото мокро бръснене</span> е нещо повече от рутинно задължение, това е ритуал, който ще Ви помогне да се отпуснете и да се насладите на истински комфорт за мъже. Този метод осигурява изключително гладко бръснене, намалява раздразненията и осигурява дълготраен резултат.</p>
+								<p class="important-delay-300 c-paper text-center lg-pt-10 font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7"><span class="c-brand font-500" style="font-family: 'Roboto'">Класическото мокро бръснене</span> е “ритуал” за мъжете. Този метод осигурява изключително гладко бръснене, намалява раздразненията и осигурява дълготраен резултат.</p>
 							</AnimatedComponent>
 						</div>
 					</div>
