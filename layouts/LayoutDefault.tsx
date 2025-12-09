@@ -175,7 +175,7 @@ export function Topbar(props: { children: JSX.Element }) {
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
   return (
     <button
-      class="flex items-center justify-between cursor-pointer b-solid b-2px c-brand hover-c-brand-orange b-brand hover-b-brand-orange bg-transparent md-w-12 md-h-12 w-10 h-10 b-rd-50% transition-colors"
+      class="flex items-center justify-between cursor-pointer b-solid b-2px c-brand-second hover-c-brand-compl b-brand-second hover-b-brand-compl bg-transparent md-w-10 md-h-10 w-10 h-10 transition-colors"
       onClick={props.onClick}
     >
       {props.children}
