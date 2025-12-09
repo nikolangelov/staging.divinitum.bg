@@ -5,7 +5,7 @@
     "dev": "vite dev",
     "copyfiles": "copyfiles -u 1 \"assets/**/*.{html,css,scss,ttf,woff,woff2,webp,eot,svg,jpg,png,js,mp4}\" dist/client/assets",
     "build": "vite build && npm run copyfiles",
-    "deploy": "cp -r -v ./dist/client/* /home/divinitum/htdocs/divinitum.bg",
+    "deploy": "cp -r -v ./dist/client/* /home/divinitum-staging/htdocs/staging.divinitum.bg",
     "preview": "vite preview",
     "test": "tsc --noEmit",
     "start-mailer": "node mail-sender/index.cjs"
