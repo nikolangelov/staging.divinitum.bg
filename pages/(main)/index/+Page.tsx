@@ -12,196 +12,109 @@ import IconoirNumber3SquareSolid from '~icons/iconoir/number-3-square-solid';
 import IconoirNumber4SquareSolid from '~icons/iconoir/number-4-square-solid';
 import IconoirNumber5SquareSolid from '~icons/iconoir/number-5-square-solid';
 import { HeroGif } from "../../../components/HeroGif";
-import { createEffect, createSignal } from "solid-js";
+import { createEffect, createSignal, onMount } from "solid-js";
 import MdiCloseThick from '~icons/mdi/close-thick';
+import emailjs from '@emailjs/browser';
 
-function Form() {
-	const [name, setName] = createSignal('');
-	const [phone, setPhone] = createSignal('');
-	const [email, setEmail] = createSignal('');
-	const [websiteLink, setWebsiteLink] = createSignal('');
-	const [text, setText] = createSignal('');
-	const [isSubmitted, setIsSubmitted] = createSignal(false);
-	const [isModalOpen, setIsModalOpen] = createSignal(false);
-	const [isUploading, setIsUploading] = createSignal(false);
-	const [progress, setProgress] = createSignal(0);
-	const [errorMessage, setErrorMessage] = createSignal('');
+interface ContactUsProps {
+	onSuccess: () => void;
+	onError: () => void;
+	setUploading: (v: boolean) => void;
+}
 
-	const resetForm = () => {
-		setName('');
-		setPhone('');
-		setEmail('');
-		setWebsiteLink('');
-		setText('');
-	};
+export const ContactUs = ({ onSuccess, onError, setUploading }: ContactUsProps) => {
+	let form: HTMLFormElement | undefined;
 
-	async function sendEmail(e: Event) {
-		e.preventDefault();
-		setIsUploading(true);
-		setProgress(0);
+	const [currentUrl, setCurrentUrl] = createSignal("");
 
-		const formData = new FormData();
-		formData.append('name', name());
-		formData.append('phone', phone());
-		formData.append('senderEmail', email());
-		formData.append('websiteLink', websiteLink());
-		formData.append('text', text());
-
-		try {
-			const response = await fetch('/api/send-email', {
-				method: 'POST',
-				body: formData,
-			});
-
-			if (response.ok) {
-				setIsSubmitted(true);
-				setIsModalOpen(true);
-				resetForm();
-			} else {
-				const errorText = await response.text();
-				setErrorMessage(`Failed to send the email. Please try again later. Error details: ${errorText}`);
-			}
-		} catch (error) {
-			console.error('Error:', error);
-			setErrorMessage('An error occurred while sending the email.');
-		} finally {
-			setIsUploading(false);
-			resetForm();
-		}
-	}
-
-	const closeModal = () => {
-		setIsModalOpen(false);
-		setIsSubmitted(false);
-		setErrorMessage('');
-		resetForm();
-	};
-
-	createEffect(() => {
-		if (isModalOpen()) {
-		}
+	onMount(() => {
+		setCurrentUrl(window.location.href);
 	});
+
+	const sendEmail = (e: Event) => {
+		e.preventDefault();
+
+		if (!form) return;
+		setUploading(true);
+
+		emailjs
+			.sendForm('service_e3agqg1', 'template_k96lj28', form, {
+				publicKey: '8kg2MVaTQlCEwwxpt',
+			})
+			.then(() => {
+				console.log('SUCCESS!');
+				if (form) form.reset();
+				setUploading(false);
+				onSuccess();
+			},
+				(error) => {
+					console.log('FAILED...', error.text);
+					setUploading(false);
+					onError();
+				}
+			);
+	};
+
 
 	return (
 		<>
-			{!isSubmitted() && !isModalOpen() && (
-				<div class="bg-white px-4 md:px-8 py-14 border border-black shadow-md">
+			<form class="space-y-6" ref={(el) => (form = el)} onSubmit={sendEmail}>
+				<div class="px-4 md:px-8 py-14 border border-black max-w-300 mx-auto">
 					<h2 class="important-text-6.5 font-bold mb-8 text-black text-center">СВЪРЖЕТЕ СЕ С НАС</h2>
-					<form class="flex flex-col space-y-7 lg:max-w-1200px lg:mx-auto" onSubmit={sendEmail} method="post" enctype="multipart/form-data">
-
-						<div>
-							<label class="text-12px md:text-14px font-700 text-black">ВАШИТЕ ИМЕНА</label>
-							<input
-								type="text"
-								value={name()}
-								onInput={(e) => setName(e.currentTarget.value)}
-								required
-								class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2"
-							/>
-						</div>
-
-						<div>
-							<label class="text-12px md:text-14px font-700 text-black">ТЕЛЕФОН</label>
-							<input
-								type="tel"
-								value={phone()}
-								onInput={(e) => setPhone(e.currentTarget.value)}
-								required
-								class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2"
-							/>
-						</div>
-
-						<div>
-							<label class="text-12px md:text-14px font-700 text-black">ИМЕЙЛ АДРЕС</label>
-							<input
-								type="email"
-								value={email()}
-								onInput={(e) => setEmail(e.currentTarget.value)}
-								required
-								class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2"
-							/>
-						</div>
-
-						<div>
-							<label class="text-12px md:text-14px font-700 text-black">ЛИНК КЪМ САЙТ/СТРАНИЦА НА БИЗНЕСА ВИ</label>
-							<input
-								type="text"
-								value={websiteLink()}
-								onInput={(e) => setWebsiteLink(e.currentTarget.value)}
-								class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2"
-							/>
-						</div>
-
-						<div>
-							<label class="text-12px md:text-14px font-700 text-black">ЗАПИТВАНЕ</label>
-							<textarea
-								value={text()}
-								onChange={(e) => setText(e.target.value)}
-								rows="4"
-								class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2 resize-none"
-							></textarea>
-						</div>
-
+					<div>
+						<label class="text-12px md:text-14px font-700 text-black">ВАШИТЕ ИМЕНА</label>
+						<input
+							type="text"
+							name="name"
+							required
+							class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2"
+						/>
+					</div>
+					<div class="mt-6">
+						<label class="text-12px md:text-14px font-700 text-black">ТЕЛЕФОН</label>
+						<input
+							type="tel"
+							name="phone"
+							required
+							class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2"
+						/>
+					</div>
+					<div class="mt-6">
+						<label class="text-12px md:text-14px font-700 text-black">ИМЕЙЛ АДРЕС</label>
+						<input
+							type="email"
+							name="email"
+							required
+							class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2"
+						/>
+					</div>
+					<div class="mt-6">
+						<label class="text-12px md:text-14px font-700 text-black">ЛИНК КЪМ САЙТ/СТРАНИЦА НА БИЗНЕСА ВИ</label>
+						<input
+							type="text"
+							name="url"
+							class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2"
+						/>
+					</div>
+					<div class="mt-6">
+						<label class="text-12px md:text-14px font-700 text-black">ЗАПИТВАНЕ</label>
+						<textarea
+							rows="4"
+							name="message"
+							class="w-full b-solid b-1px b-black p-1.5 text-sm mt-2 resize-none"
+						></textarea>
+					</div>
+					<div class="flex justify-center">
 						<button
 							type="submit"
-							class="cursor-pointer bg-brand-second hover:bg-brand-second-hover b-none text-black text-3.8 tracking-0.5px font-bold py-3 px-5 max-w-full mx-auto transition-colors"
-						>
+							class="mt-6 cursor-pointer bg-brand-second hover:bg-brand-second-hover b-none text-black text-3.8 tracking-0.5px font-bold py-3 px-5 max-w-full mx-auto transition-colors">
 							ИЗПРАТЕТЕ
 						</button>
-					</form>
-				</div>
-			)}
-
-			{isUploading() && (
-				<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-					<div class="bg-black py-10 px-6 shadow-lg max-w-full w-96">
-						<h3 class="text-lg font-semibold mb-3">Изпращане...</h3>
-						<div class="w-full bg-gray-200 h-4 overflow-hidden relative">
-							<div
-								class="h-full relative"
-								style={{
-									background: 'linear-gradient(to right, #aeeb56, #87bd40ff)',
-								}}
-							>
-								<div
-									class="progress-bar-contacts-form-span"
-								/>
-							</div>
-						</div>
 					</div>
 				</div>
-			)}
-
-			{isModalOpen() && (
-				<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5 px-5">
-					<div class="bg-black p-8 shadow-lg max-w-md w-full">
-						<h2 class="important-text-5.5 font-bold mb-4 mt-1">Успешно изпращане!</h2>
-						<p class="mb-5 pr-2">Съобщението е изпратено успешно! Ще се свържем с Вас възможно най-скоро.</p>
-						<button
-							onClick={closeModal}
-							class="bg-brand text-white tracking-0.8px px-5 py-3 b-none hover:bg-brand-second-action-hover transition-colors">
-							Затвори
-						</button>
-					</div>
-				</div>
-			)}
-
-			{errorMessage() && (
-				<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-5 px-5">
-					<div class="bg-black px-8 pb-10 pt-7 shadow-lg max-w-lg w-full relative">
-						<div
-							onClick={closeModal}
-							class="cursor-pointer b-none c-brand hover-c-brand-action transition-colors absolute top-4 right-4">
-							<MdiCloseThick class="w-8 font-size-5" />
-						</div>
-						<h3 class="font-semibold important-mb-6 text-left">Oops...</h3>
-						<div>Изглежда, че нашата контактна форма не работи правилно.</div>
-						<div>Моля, свържете се с нас чрез Viber.</div>
-						<div class="mt-7"><a class="c-paper text-white px-5 py-3 b-none bg-brand hover:bg-brand-hover transition-colors" href="viber://chat?number=%2B359879494220" target="_blank" rel="noopener">Към чат</a></div>
-					</div>
-				</div>
-			)}
-		</>);
+			</form>
+		</>
+	);
 }
 
 function SlidingLogoCarousel(props: { class: string; }) {
@@ -388,7 +301,27 @@ function SingleCollapse() {
 }
 
 export default function Page() {
+	const [isModalOpen, setIsModalOpen] = createSignal(false);
+	const [isUploading, setIsUploading] = createSignal(false);
+	const [errorMessage, setErrorMessage] = createSignal(false);
+	const [isSuccess, setIsSuccess] = createSignal(false);
 
+	const handleSuccess = () => {
+		setIsUploading(false);
+		setErrorMessage(false);
+		setIsSuccess(true);
+		setIsModalOpen(true);
+	};
+
+	const handleError = () => {
+		setErrorMessage(true);
+	};
+
+	const closeModal = () => {
+		setIsModalOpen(false);
+		setErrorMessage(false);
+		setIsSuccess(false);
+	};
 	return (
 		<>
 			<div class="relative w-full">
@@ -554,7 +487,7 @@ export default function Page() {
 								/>
 								<BasicReview
 									reviewText={<>
-										Още от самото начало, когато започнахме работа имаше положителен прогрес, а реалните резултати дойдоха след няколко месеца. Като пример мога да дам, че в гугъл сме на първо място по всички ключови думи, имайки предвид голямата конкуренция. 
+										Още от самото начало, когато започнахме работа имаше положителен прогрес, а реалните резултати дойдоха след няколко месеца. Като пример мога да дам, че в гугъл сме на първо място по всички ключови думи, имайки предвид голямата конкуренция.
 									</>}
 									name="Кристиан Митов"
 									job={<>
@@ -622,7 +555,7 @@ export default function Page() {
 						<div>
 							<h3 class="text-lg important-lg:text-7 font-semibold text-brand-second uppercase important-mt-40px important-mb-10px important-leading-8 important-lg:leading-9">“Нашата цел е да помогнем на вашия бизнес да остави траен отпечатък в днешния дигитален свят.”</h3>
 							<div class="flex flex-row justify-start items-center">
-								<p class="italic text-base lg:text-lg">CEO of</p> 
+								<p class="italic text-base lg:text-lg">CEO of</p>
 								<img src="/assets/Divinitum-logo.svg" class="max-w-140px ml-3" />
 							</div>
 						</div>
@@ -839,8 +772,62 @@ export default function Page() {
 			</section>
 
 			<div class="bg-paper" id="contact-form">
-				<Form />
+				<ContactUs
+					onSuccess={handleSuccess}
+					onError={handleError}
+					setUploading={setIsUploading}
+				/>
 			</div>
+
+			{isUploading() && (
+				<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+					<div class="bg-black py-10 px-6 shadow-lg max-w-full w-96">
+						<h3 class="important-text-md font-semibold mb-3">Изпращане...</h3>
+						<div class="w-full bg-gray-200 h-4 overflow-hidden relative">
+							<div
+								class="h-full relative"
+								style={{
+									background: 'linear-gradient(to right, #aeeb56, #87bd40ff)',
+								}}
+							>
+								<div
+									class="progress-bar-contacts-form-span"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			)}
+
+			{isModalOpen() && (
+				<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5 px-5">
+					<div class="bg-black p-8 shadow-lg max-w-md w-full">
+						<h2 class="important-text-5.5 font-bold mb-4 mt-1">Успешно изпращане!</h2>
+						<p class="mb-5 pr-2">Съобщението е изпратено успешно! Ще се свържем с Вас възможно най-скоро.</p>
+						<button
+							onClick={closeModal}
+							class="cursor-pointer bg-brand text-white tracking-0.8px px-5 py-3 b-none hover:bg-brand-second-action-hover transition-colors">
+							Затвори
+						</button>
+					</div>
+				</div>
+			)}
+
+			{errorMessage() && (
+				<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-5 px-5">
+					<div class="bg-black px-8 pb-10 pt-7 shadow-lg max-w-lg w-full relative">
+						<div
+							onClick={closeModal}
+							class="cursor-pointer b-none c-brand hover-c-brand-action transition-colors absolute top-4 right-4">
+							<MdiCloseThick class="w-8 font-size-5" />
+						</div>
+						<h3 class="font-semibold important-mb-6 text-left">Oops...</h3>
+						<div>Изглежда, че нашата контактна форма не работи правилно.</div>
+						<div>Моля, изпратете ни съобщение на имейл:</div>
+						<div class="mt-7"><a class="cursor-pointer c-paper text-white px-5 py-3 b-none bg-brand hover:bg-brand-hover transition-colors tracking-0.2" href="mailto:office@divinitum.bg" target="_blank" rel="noopener">office@divinitum.bg</a></div>
+					</div>
+				</div>
+			)}
 		</>
 	);
 }

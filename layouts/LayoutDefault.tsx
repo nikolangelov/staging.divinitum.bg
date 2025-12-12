@@ -35,7 +35,7 @@ function Footer() {
   return (
     <div class="mt--2 py-20 w-full z-35 bg-black bottom-0 transition-all duration-300 ease-in-out">
       <div class="flex flex-col justify-center items-center h-full">
-        <img src="/assets/Divinitum-logo.svg" class="w-70 lg:w-80" />
+        <img src="/assets/Divinitum-logo-black-Sanford-white-without-lines.png" class="w-70 lg:w-80" />
 
         <div class="flex flex-col justify-center items-center gap-4">
           <div class="mt-10 relative flex justify-center items-center gap-2">
@@ -151,7 +151,7 @@ onMount(() => {
       <div class="block relative mx-auto md:mt-2">
         <img
           ref={(el) => (logoRef = el)}
-          src="/assets/Divinitum-logo.svg"
+          src="/assets/Divinitum-logo-black-Sanford-white-without-lines.png"
           class="w-45 lg:w-50 animate-initial"
           alt="Divinitum"
         />
